@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
 
   def index
-    @service = NrelService.new(params['search'])
+    @service = NrelService.new(params['q'])
   end
 
 end

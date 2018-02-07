@@ -3,16 +3,16 @@ require 'rails_helper'
 feature "User visits root page" do
     it 'can locate the 10 closest stations ' do
     visit "/"
+    save_and_open_page
+    fill_in :q, with: "80203"
+    click_on "Locate"
 
-    fill_in :search, with: "80203"
-    click_on "Search"
-
-
-    expect(page).to have_content("Glaser Energy Group")
+    expect(page).to have_content("Metrogas Inc LPG Denver CO 790 W 64th Ave 80221 5.67682")
     expect(page).to have_content("LPG")
+    expect(page).to have_content("LPG")
+
     end
 end
-
 
 
 
