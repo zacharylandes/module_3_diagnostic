@@ -9,6 +9,7 @@ feature "User visits root page" do
 
 
     expect(page).to have_content("Glaser Energy Group")
+    expect(page).to have_content("LPG")
     end
 end
 

@@ -1,7 +1,7 @@
 class NrelService
-
+  attr_reader :result
   def initialize(params)
-    @search = search(params)
+    @result = search(params)
   end
 
   def search(params)
@@ -12,5 +12,10 @@ class NrelService
 
   def station_name
     names = @search['fuel_stations'].map{|station|station['station_name']}
+  end
+
+  def station_type
+    type =  @search['fuel_stations'].map{|station|station['fuel_type']}
+    binding.pry
   end
 end

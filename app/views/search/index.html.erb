@@ -1,3 +1,4 @@
-<% @result.station_name.each do |name| %>
-<%=name  %>
+<% @service.result['fuel_stations'].each do |station| %>
+  <%=station['station_name']  %>
+  <%=station['fuel_type_code']  %>
 <% end %>
