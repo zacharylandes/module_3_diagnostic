@@ -1,9 +1,10 @@
 <% @service.result['fuel_stations'].each do |station| %>
-  <p><%=station['station_name']  %></p>
-  <p><%=station['fuel_type_code']  %></p>
-  <p><%= station['city'] %></p>
-  <p><%= station['state'] %></p>
-  <p><%= station['street_address'] %></p>
-  <p><%= station['zip'] %></p>
-  <p><%= station['distance'] %></p>
+  <p>Station: <%=station['station_name']  %></p>
+  <p>fuel Type: <%=station['fuel_type_code']  %></p>
+  <p>City: <%= station['city'] %></p>
+  <p> State: <%= station['state'] %></p>
+  <p> Street Address<%= station['street_address'] %></p>
+  <p>Zip:<%= station['zip'] %></p>
+  <p>Distance:<%= station['distance'] %></p>
+  <p>Access Times: <%= station['access_days_time'] %></p>
 <% end %>
