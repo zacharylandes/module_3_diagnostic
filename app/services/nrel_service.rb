@@ -1,5 +1,6 @@
 class NrelService
   attr_reader :result, :lat, :long
+  
   def initialize(params)
     @result = search(params)
     @lat = @result['latitude']
@@ -12,11 +13,4 @@ class NrelService
     response = JSON.parse(response.body)
   end
 
-  def station_name
-    names = @search['fuel_stations'].map{|station|station['station_name']}
-  end
-
-  def station_type
-    type =  @search['fuel_stations'].map{|station|station['fuel_type']}
-  end
 end
