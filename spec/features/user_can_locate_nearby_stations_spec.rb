@@ -1,20 +1,20 @@
 require 'rails_helper'
 
 feature "User visits root page" do
-  scenario "user inputs zipcode " do
-    it 'can locate the 10 closest stations '
+    it 'can locate the 10 closest stations ' do
     visit "/"
 
-    fill_in :
+    fill_in :search, with: "80203"
+    click_on "Search"
 
 
-    within(".navbar") do
-      expect(page).to have_content("AltFuelFinder")
-      expect(page).to have_selector("input[value='Search by zip...']")
+
+
+    expect(page).to have_content(" Barns Conoco Store ")
     end
-  end
-
 end
+
+
 
 
 # ```As a user
