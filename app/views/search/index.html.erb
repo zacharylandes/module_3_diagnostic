@@ -1,4 +1,4 @@
-<% @service.result['fuel_stations'].each do |station| %>
+<% @service['fuel_stations'].each do |station| %>
   <p>Station: <%=station['station_name']  %></p>
   <p>fuel Type: <%=station['fuel_type_code']  %></p>
   <p>City: <%= station['city'] %></p>
