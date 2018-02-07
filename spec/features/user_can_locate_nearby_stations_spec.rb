@@ -6,14 +6,12 @@ feature "User visits root page" do
     fill_in :q, with: "80203"
     click_on "Locate"
 
-
+    expect(current_path).to eq('/search')
     expect(page).to have_content("Station: Suburban Propane")
     expect(page).to have_content("fuel Type: LPG")
     expect(page).to have_content("Zip:80232")
     expect(page).to have_content("Distance:4.53481")
     expect(page).to have_content("Access Times: 7:30am-4:30pm M-F;")
-
-
     end
 end
 
