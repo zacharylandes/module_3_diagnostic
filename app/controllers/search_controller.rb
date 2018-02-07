@@ -1,8 +1,7 @@
 class SearchController < ApplicationController
 
   def index
-    binding.pry
-    @result = NrelService.new.search(params['search'])
+    @result = NrelService.new(params['search'])
   end
 
 end

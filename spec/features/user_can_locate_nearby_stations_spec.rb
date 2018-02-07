@@ -8,9 +8,7 @@ feature "User visits root page" do
     click_on "Search"
 
 
-
-
-    expect(page).to have_content(" Barns Conoco Store ")
+    expect(page).to have_content("Glaser Energy Group")
     end
 end
 
